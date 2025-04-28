@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: admin      # 替换为你的用户名
+      POSTGRES_PASSWORD: password  # 替换为你的密码
+      POSTGRES_DB: dev_database        # 替换为你的数据库名（可选，默认与用户名相同）
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data  # 持久化数据到本地目录
+    ports:
+      - "5432:5432"                     # 映射主机5432端口到容器5432端口
+    restart: unless-stopped             # 容器退出时自动重启（除非手动停止）
