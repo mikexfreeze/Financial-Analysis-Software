@@ -6,7 +6,7 @@ export class UserService {
     private userRepository: UserRepository;
 
     constructor() {
-        this.userRepository = getRepository(UserRepository);
+        this.userRepository = new UserRepository();
     }
 
     async createUser(name: string, email: string, password: string): Promise<User> {
