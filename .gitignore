@@ -1,1 +1,3 @@
 docker/postgres-data
+back-end/dist
+*node_modules/

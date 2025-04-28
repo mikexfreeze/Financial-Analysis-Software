@@ -1,0 +1,28 @@
+{
+  "name": "financial-analysis-backend",
+  "version": "1.0.0",
+  "description": "Backend for Financial Analysis Software using Node.js and TypeORM",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "migrate": "typeorm migration:run",
+    "dev": "ts-node-dev src/index.ts"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "typeorm": "^0.2.34",
+    "reflect-metadata": "^0.1.13",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3",
+    "@types/node": "^16.0.0",
+    "@types/express": "^4.17.13",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
