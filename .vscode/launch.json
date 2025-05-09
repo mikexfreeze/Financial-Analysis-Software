@@ -1,0 +1,41 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Program with ts-node",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register",
+        "-r",
+        "tsconfig-paths/register"
+      ],
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}\\back-end\\src\\app.ts", // 指向项目入口文件
+      "cwd": "${workspaceFolder}\\back-end", // 设置工作目录
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+        // {
+    //   "type": "node",
+    //   "request": "launch",
+    //   "name": "Launch Program",
+    //   "skipFiles": [
+    //     "<node_internals>/**"
+    //   ],
+    //   "program": "${workspaceFolder}\\back-end\\src\\index.ts", // 指向项目入口文件
+    //   "preLaunchTask": "tsc: build - back-end", // 确保 TypeScript 编译
+    //   "outFiles": [
+    //     "${workspaceFolder}/back-end/dist/**/*.js" // 指向编译后的输出目录
+    //   ]
+    // },
+  ]
+}
