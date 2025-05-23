@@ -13,4 +13,9 @@ export class UserService {
     async getAllUsers(): Promise<User[]> {
         return await UserRepository.findAllUsers();
     }
+
+    // 新增：根据邮箱查找用户
+    async getUserByEmail(email: string): Promise<User | null> {
+        return await UserRepository.findByEmail(email);
+    }
 }
