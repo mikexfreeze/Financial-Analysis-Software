@@ -7,7 +7,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug Program with ts-node",
+      "name": "Debug Backend with ts-node",
       "runtimeArgs": [
         "-r",
         "ts-node/register",
